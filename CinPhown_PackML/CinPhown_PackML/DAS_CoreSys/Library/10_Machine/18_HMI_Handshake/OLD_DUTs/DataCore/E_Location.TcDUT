@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_Location" Id="{c85e828e-a5a2-43aa-9231-55accd8912b4}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_Location :
+(
+	default				:= 0,	//不作動
+	UpConvery			:= 1,	//入料上層軌道
+	LowConvery			:= 2,	//出料下層軌道
+	OutPullconveryLeft 	:= 3,	//待研磨軌道
+	OutPullconveryRight := 4,	//取空盒軌道
+	Warehouse 			:= 5,	//倉儲
+	Buffers				:= 6,   //緩衝區
+	SameConvery			:= 7, 	//同尺寸軌道
+	DifferentConvery	:= 8,	//不同尺寸軌道
+	AllocateLeft		:= 9,	//圓帶左盒
+	AllocatrRight		:= 10,	//圓帶右盒
+)UINT;
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

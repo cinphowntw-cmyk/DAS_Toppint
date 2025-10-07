@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleChangeAllocateInfo" Id="{299ea9cd-d7b9-4b43-aa7a-6d7dcac32f4b}">
+    <Declaration><![CDATA[TYPE ST_NeedleChangeAllocateInfo :
+STRUCT
+	//確認是否要換
+	CheckedChangeAllocate	:  BOOL;
+	ChangeAllocate 			:  ARRAY[0..40] OF st_AllocationData;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

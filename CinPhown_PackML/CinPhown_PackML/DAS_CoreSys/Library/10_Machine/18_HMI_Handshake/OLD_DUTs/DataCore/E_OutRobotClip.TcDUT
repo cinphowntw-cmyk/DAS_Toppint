@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_OutRobotClip" Id="{af34574c-5768-40d9-933b-383fcc881008}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_OutRobotClip :
+(
+	clip_A		:= 0,
+	clip_B		:= 1,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

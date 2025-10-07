@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_LayerStationMove" Id="{c63b5a00-3fe8-4371-ba3f-e6b975c3e6b5}">
+    <Declaration><![CDATA[TYPE st_LayerStationMove :
+STRUCT
+	LayerPoint		: E_LayerPoint;
+	Handshake		: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

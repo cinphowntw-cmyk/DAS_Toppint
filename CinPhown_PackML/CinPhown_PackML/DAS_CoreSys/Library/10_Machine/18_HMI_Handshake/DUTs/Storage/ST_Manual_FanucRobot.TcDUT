@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Manual_FanucRobot" Id="{dae8f7a2-7fed-4c6d-8430-f3253d4e3def}">
+    <Declaration><![CDATA[TYPE ST_Manual_FanucRobot :
+STRUCT
+	ClampA_Open  		: BOOL; // True: set clampA open 
+	ClampA_Close 		: BOOL; // True: Set ClampA Close
+	ClampB_Open  		: BOOL; // True: Set ClampB Open
+	ClampB_Close 		: BOOL; // True: Set ClampB Close
+	ByPassClampSensor   : BOOL; // True : Bypass clampA and clampB
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

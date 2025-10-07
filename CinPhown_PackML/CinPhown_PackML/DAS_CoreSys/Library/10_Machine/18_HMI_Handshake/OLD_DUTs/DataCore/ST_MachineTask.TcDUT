@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_MachineTask" Id="{a054ef91-0e37-4f37-81dd-cfabefb6b6ce}">
+    <Declaration><![CDATA[TYPE ST_MachineTask :
+STRUCT
+	Feeding						: ST_Feeding;						//入料包含拍照
+	Output						: ST_Output;						//出料
+	Needle						: ST_Needle;						//配針資料提供
+	NeedleRemove				: ST_NeedleRemove;					//拔針資料提供
+	NeedleGetBox				: ST_GetBox;						//配針領料(滿盒)
+	NeedleRemoveGetBox			: ST_GetBox;						//拔針領料(待拔針)
+	NeedleChangeAllocate		: ST_ChangeAllocate;				//配針換圓帶
+	NeedleRemoveChangeAllocate	: ST_ChangeAllocate;				//拔針換圓帶 
+	WarehouseBack 				: ST_WarehouseBack;					//配針回倉
+	WarehouseBackRemove 		: ST_WarehouseBack;					//拔針回倉
+	SheepingPicture				: ST_SheepingPicture;				//出貨拍照
+	AllocatePicture				: ST_SheepingPicture;				//圓帶拍照
+	NeedleChangeBox				: ST9_ChangeBox; 					//配針換盒
+	NeedleRemoveChangeBox		: ST9_ChangeBox;					//拔針換盒
+	SixRobotWarehouseAction 	: ST_SixRobotAction,				//手臂倉儲動作				//手臂緩衝區動作
+	Alarm						: ARRAY[0..999] OF ST_Alarm_Tmax;	//錯誤資訊
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

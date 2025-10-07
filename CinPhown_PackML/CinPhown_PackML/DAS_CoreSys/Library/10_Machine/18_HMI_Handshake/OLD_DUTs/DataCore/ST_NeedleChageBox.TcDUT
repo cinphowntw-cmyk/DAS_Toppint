@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleChageBox" Id="{0520cb5e-dcf2-4afe-9db0-dcad43e6f143}">
+    <Declaration><![CDATA[TYPE ST_NeedleChageBox :
+STRUCT
+	//確認是否要更換盒子
+	CheckChageBox 	:BOOL; 
+	//資料
+	ST_NeedleChageBoxData : ARRAY[0..40] OF st_NeedleChageBoxData;
+	//資料交握確認
+	HandShake								: st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

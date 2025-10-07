@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_FeedingDataFeeback" Id="{da182306-cb57-4f07-a11d-b3c73e6cca7e}">
+    <Declaration><![CDATA[TYPE ST_FeedingDataFeeback :
+STRUCT
+	Camera 					:BOOL;
+	CameraDiameter 			:BOOL;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

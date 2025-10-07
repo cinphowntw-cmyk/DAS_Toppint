@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_NeedleChageBoxData" Id="{a9c060ed-fd3b-41d7-8e20-05ea24a110b9}">
+    <Declaration><![CDATA[TYPE st_NeedleChageBoxData :
+STRUCT
+	//圓帶位置
+	AllocationNo 	:INT;
+	//倉儲儲位
+	StorageInfor	:INT;
+	//盒子順序
+	BoxOrder 		:INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

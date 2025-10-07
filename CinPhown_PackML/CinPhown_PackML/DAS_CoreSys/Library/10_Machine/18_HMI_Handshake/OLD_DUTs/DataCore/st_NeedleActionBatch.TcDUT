@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_NeedleActionBatch" Id="{17ed98c2-5f3f-421f-b717-2ad754274d48}">
+    <Declaration><![CDATA[TYPE st_NeedleActionBatch :
+STRUCT
+	mode			: E_mode;
+	Handshake		: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_AxisPara" Id="{8ef49e5e-9f23-47cb-b572-da51615cc22a}">
+    <Declaration><![CDATA[TYPE
+    ST_AxisPara :
+    STRUCT
+        Manual   : ST_AxisPara_Manual; 	// 手動控制參數
+        Auto     : ST_AxisPara_Auto; 	// 自動控制參數
+        Homing   : ST_AxisPara_Homing; 	// 回HOME參數
+    END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

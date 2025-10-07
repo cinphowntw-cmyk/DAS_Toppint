@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_WarehouseData" Id="{ddcaff7d-2f26-4183-9b07-fc174397b36d}">
+    <Declaration><![CDATA[TYPE st_WarehouseData :
+STRUCT
+	//圓帶位置
+	AllocationNo 	:E_StationOrder;
+	//放到哪裡
+	AREA			:E_Location;
+	//倉儲儲位
+	StorageInfor	:INT;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

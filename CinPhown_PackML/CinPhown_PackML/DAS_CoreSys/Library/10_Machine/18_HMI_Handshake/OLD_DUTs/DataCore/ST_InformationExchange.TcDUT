@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_InformationExchange" Id="{43c36981-dde6-4821-a686-890938d013e8}">
+    <Declaration><![CDATA[TYPE ST_InformationExchange:
+STRUCT
+END_STRUCT
+//配針領滿盒
+NeedleFullBox						: ARRAY[0..300] OF ST_BoxGet
+//配針換盒
+NeedleChageBox						: 	ST_NeedleChageBox
+//配針換圓帶
+NeedleChageRotate					:	ST_NeedleChageRotate
+//配針回倉
+NeedleWarehouse						:	ARRAY[0..40] OF 		ST_NeedleWarehouse
+//拔針領待拔針
+NeedleRemoveBox						: ARRAY[0..30] OF ST_BoxGet
+//拔針換盒
+NeedleRemoveChageBox				:	ST_ NeedleChageBox
+//拔針換圓帶
+NeedleRemoveChageRotate				:	ST_NeedleChageRotate
+//拔針回倉
+NeedleRemoveWarehouse				:	ARRAY[0..40] OF 		ST_NeedleWarehouse
+END_STRUCT
+ END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

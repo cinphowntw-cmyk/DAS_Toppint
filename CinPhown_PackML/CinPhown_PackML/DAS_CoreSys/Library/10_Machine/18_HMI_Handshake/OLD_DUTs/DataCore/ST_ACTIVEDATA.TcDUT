@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_ACTIVEDATA" Id="{9d2e6127-e5a9-4495-8672-b35703c9139a}">
+    <Declaration><![CDATA[TYPE ST_ACTIVEDATA :
+STRUCT
+	//當前任務狀態
+	MachineTask					: E_MachineTask
+	//配針換盒
+	RotateChangeBoxData 		: ST_RotateChangeBoxData;
+	//拔針換盒
+	RotateChangeRemoveBoxData 	: ST_RotateChangeBoxData;
+	//切換圓帶
+	RotateChangeData 			: ST_RotateChangeData;
+	//手臂出倉完成
+	SixRobotGet 				: ST_SixRobotGet;
+	//手臂入倉完成
+	SixRobotPut 				: ST_SixRobotGet;
+	//領取盒滿
+	GetFullBox					: ST_GetFullBox
+	//領取待拔針
+	GetRemoveBox 				: ST_GetRemoveBox
+	//錯誤
+	AutoMode_ErrorHandle 		: ST_Alarm;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

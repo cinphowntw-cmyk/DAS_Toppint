@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_DischargeDataInfo" Id="{e2ee02c3-3421-4839-86ef-31049de0a30f}">
+    <Declaration><![CDATA[TYPE ST_DischargeDataInfo :
+STRUCT
+	//倉儲儲位
+	StorageInfor	:INT;
+	//盒子順序
+	BoxOrder 		:INT;
+	//放置位置
+	PutPlace 		:E_Location;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

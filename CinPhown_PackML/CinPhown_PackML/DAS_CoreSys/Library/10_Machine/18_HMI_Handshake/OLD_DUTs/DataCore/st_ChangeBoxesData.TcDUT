@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_ChangeBoxesData" Id="{37920a2d-3b7f-4164-9648-2ff1f78e17f8}">
+    <Declaration><![CDATA[TYPE st_ChangeBoxesData :
+STRUCT
+	//圓帶位置
+	AllocationNo			: E_StationOrder;//1~40 
+	//倉儲位置
+	StorageInfor			: INT; //1~400
+	//盒子順序
+	BoxOrder				: INT;//1~10
+	//數量
+	Num						: INT;//1~50
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

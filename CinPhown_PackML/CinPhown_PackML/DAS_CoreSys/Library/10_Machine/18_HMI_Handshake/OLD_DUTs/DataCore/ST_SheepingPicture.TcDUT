@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SheepingPicture" Id="{1c5e256b-e8bb-4c96-9308-b89b360ab83f}">
+    <Declaration><![CDATA[TYPE ST_SheepingPicture :
+STRUCT
+	Info 						: ST_SheepingPictureInfo;
+	Feeback 					: ST_SheepingPictureFeeback;
+	Handshake	: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

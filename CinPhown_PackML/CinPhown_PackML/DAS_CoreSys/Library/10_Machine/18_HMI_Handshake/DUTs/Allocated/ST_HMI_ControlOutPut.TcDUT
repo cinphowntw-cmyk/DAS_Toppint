@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_HMI_ControlOutPut" Id="{73b03cca-7011-471f-8414-01577295aac5}">
+    <Declaration><![CDATA[TYPE
+    ST_HMI_ControlOutPut :
+    STRUCT      
+		FanucRobot	    : ST_Manual_FanucRobot; 	//六軸手臂行動命令
+		RackMotor 	    : ST_Manual_Axis;			//補貨料架馬達行動命令
+		OutRobot        : ST_Manual_OutRobot;       //出料手臂行動命令
+        NeedleRobot     : ST_Manual_NeedleRobot; 	//配針手臂行動命令
+        Allocate        : ST_Manual_Allocate;     	//圓帶行動命令
+        TurnTable       : ST_Manual_TurnTable;      //圓盤行動命令 
+		ElvaterAxis		: ST_Manual_Axis;			//電梯行動命令
+		HookAxis		: ST_Manual_Axis;			//勾盤行動命令
+		FinishAxis		: ST_Manual_Axis;			//出料層架行動命令
+ END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

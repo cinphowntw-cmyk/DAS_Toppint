@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleAllocateinfo" Id="{aafe5135-2a81-4681-b75d-216ab9cf8523}">
+    <Declaration><![CDATA[TYPE ST_NeedleAllocateinfo :
+STRUCT
+		//告知位置
+		WarehouseGetBox		: ARRAY[0..300] OF ST_WarehouseGetBox;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

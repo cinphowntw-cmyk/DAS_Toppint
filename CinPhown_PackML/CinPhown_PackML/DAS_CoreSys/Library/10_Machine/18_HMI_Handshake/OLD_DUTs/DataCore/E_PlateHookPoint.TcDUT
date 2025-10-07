@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_PlateHookPoint" Id="{e83fd297-2ef4-4fea-8b98-c08d783fcf03}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_PlateHookPoint :
+(
+	Origin 		:= 0,
+	Station_1	:= 1,
+	Station_2	:= 2,
+	Station_3	:= 3,
+	Station_4	:= 4,
+	Station_5	:= 5,
+	Station_6	:= 6,
+	Station_7	:= 7,
+	Station_8	:= 8,
+	Station_9	:= 9,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

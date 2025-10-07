@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SetupPara" Id="{9b5bf0bd-f51b-44b9-9e2f-efc219f75616}">
+    <Declaration><![CDATA[TYPE
+    ST_SetupPara :
+    STRUCT
+        Cylinders     : ST_SetupCylinder;					//汽缸參數
+        Axes          : ST_SetupAxis;						//軸參數
+        Motor         : ST_SetupMotor;						//軌道參數
+        PositionTable : ARRAY[1..200] OF ST_PositionTable;  //點位參數
+        StorageRobot  : ST_SetupFanucRobot;					//六軸手臂參數
+        Mechanical    : ST_Setup_Mechanical;				//機台參數
+	//		Light 		  : ST_Setup_Light;換位子
+    END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

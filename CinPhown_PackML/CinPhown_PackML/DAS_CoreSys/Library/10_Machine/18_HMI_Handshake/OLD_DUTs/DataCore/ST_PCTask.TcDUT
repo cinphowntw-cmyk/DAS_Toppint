@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_PCTask" Id="{ab6ec3b2-9c52-412a-8609-06964d9ea7b2}">
+    <Declaration><![CDATA[TYPE ST_PCTask :
+STRUCT
+	Needle			:BOOL;//配針
+	NeedleRemove	:BOOL;//拔針
+	Feeding			:BOOL;//入料
+	Output			:BOOL;//出料
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

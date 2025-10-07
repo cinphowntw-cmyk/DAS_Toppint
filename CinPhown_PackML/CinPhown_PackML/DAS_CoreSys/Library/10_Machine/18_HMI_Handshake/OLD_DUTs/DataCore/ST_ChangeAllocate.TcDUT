@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_ChangeAllocate" Id="{fc1f884f-e53b-4278-931e-6bde4f5bc18b}">
+    <Declaration><![CDATA[TYPE ST_ChangeAllocate :
+STRUCT
+		Info 						: ST_NeedleChangeAllocateInfo;
+		Handshake					: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

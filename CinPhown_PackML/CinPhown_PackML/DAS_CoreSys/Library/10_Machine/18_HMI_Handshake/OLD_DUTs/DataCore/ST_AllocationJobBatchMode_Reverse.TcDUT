@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_AllocationJobBatchMode_Reverse" Id="{efd7ffe2-345c-4a53-8aef-0e2a493eac77}">
+    <Declaration><![CDATA[TYPE ST_AllocationatchMode_Reverse:
+STRUCT
+//配針動作資料
+	NeedleInfo					: ARRAY[0..2000] OF ST_AllocationJobBatchModeInfo; 
+//圓帶資料
+	AllocationInfoData			: ARRAY[0..6] OF ST_AllocationInfo;
+//資料交握確認
+	HandShake					: st_HandshakeBase;
+END_STRUCT
+ END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

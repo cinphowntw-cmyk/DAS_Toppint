@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SixRobotActionFeeback" Id="{2352a7b8-cb98-4011-9588-67c6b4ef615c}">
+    <Declaration><![CDATA[TYPE ST_SixRobotActionFeeback :
+STRUCT
+	SixRobotState			:E_MachineMode
+	GET						:BOOL
+	//倉儲位置
+	A_StorageInfor			: INT; //1~400
+	//倉儲位置
+	B_StorageInfor			: INT; //1~400
+	A_Location				: E_Location
+	B_Location				: E_Location
+	A_Done					: BOOL;
+	B_Done					: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

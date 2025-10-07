@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <GVL Name="GVL_ADS" Id="{5efe146d-04b9-4223-9d5c-08a1f667dbdc}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	StorageTask 		:   E_MachineTask;
+	NeedleTask			:   E_MachineTask;
+	ShippingTask		:   E_MachineTask;
+	
+	PCTask              :  	ST_PCTask;
+	//手動模式
+	Manualmode			:	ST_MachineAdjust;
+	//自動
+ 	Automode 			:	ST_MachineTask;   
+	ActiveFinishing 	:	ST_ActiveResult;
+	MachineMode         :   ST_Mode;
+	
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

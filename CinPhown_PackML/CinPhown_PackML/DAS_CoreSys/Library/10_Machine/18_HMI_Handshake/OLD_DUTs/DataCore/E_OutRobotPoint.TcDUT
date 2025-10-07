@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_OutRobotPoint" Id="{767f42b6-a833-44f4-921b-5bf8c15735da}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_OutRobotPoint :
+(
+	default 			:= 0,
+	SameConvery 		:= 1,
+	DifferentConvery	:= 2,
+	TurnTableLeft		:= 3,
+	TurnTableRight		:= 3,
+
+	
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

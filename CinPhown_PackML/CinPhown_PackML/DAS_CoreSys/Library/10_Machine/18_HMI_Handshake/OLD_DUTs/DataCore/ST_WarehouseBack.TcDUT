@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_WarehouseBack" Id="{7079a2f4-09dd-4827-b910-ed33ece10a66}">
+    <Declaration><![CDATA[TYPE ST_WarehouseBack :
+STRUCT
+		Info 	: ST_WarehouseBackInfo;
+		Feeback : ST_WarehouseBackFeeback;
+		Handshake	: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

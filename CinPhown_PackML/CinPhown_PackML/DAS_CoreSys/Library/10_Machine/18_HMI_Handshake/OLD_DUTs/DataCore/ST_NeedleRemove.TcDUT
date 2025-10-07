@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleRemove" Id="{3daf1b80-bc89-44e3-a86f-d471741d5665}">
+    <Declaration><![CDATA[TYPE ST_NeedleRemove :
+STRUCT
+	//配針動作資料
+		NeedleInfo					: ARRAY[0..2000] OF ST_AllocationJobBatchModeInfo; 
+	//初始圓帶資料
+		AllocationInfoData			: ARRAY[0..40] OF st_AllocationData;
+	//拔針盒數
+		NeedleRemoveCount			:INT;
+	//資料交握確認
+		HandShake					: st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

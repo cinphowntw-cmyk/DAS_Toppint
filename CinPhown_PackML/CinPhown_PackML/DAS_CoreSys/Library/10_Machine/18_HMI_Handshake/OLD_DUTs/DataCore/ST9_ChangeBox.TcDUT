@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST9_ChangeBox" Id="{a23ad80b-88fe-4680-b5ed-e7ab04055b72}">
+    <Declaration><![CDATA[TYPE ST9_ChangeBox :
+STRUCT
+	Info 			: ST1_ChangeBoxInfo;
+	Handshake		: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_NeedlePoint" Id="{08d36390-6904-4a13-9b2b-0df3aa5376a9}">
+    <Declaration><![CDATA[TYPE E_NeedlePoint :
+STRUCT
+	default				:0,
+	AllocateLeft 		:1,
+	AllocateRight 		:2,
+	TurntableLeft       :3,
+	TurntableRight		:4,
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

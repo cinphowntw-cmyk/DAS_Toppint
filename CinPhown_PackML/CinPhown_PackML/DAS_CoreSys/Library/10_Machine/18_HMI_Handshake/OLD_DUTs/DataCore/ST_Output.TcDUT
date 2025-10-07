@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Output" Id="{7b502a25-565b-4295-83cd-5ccb6deb376a}">
+    <Declaration><![CDATA[TYPE ST_Output :
+STRUCT
+		Info						: ARRAY[0..300] OF ST_DischargeDataInfo;
+		HandShake					: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

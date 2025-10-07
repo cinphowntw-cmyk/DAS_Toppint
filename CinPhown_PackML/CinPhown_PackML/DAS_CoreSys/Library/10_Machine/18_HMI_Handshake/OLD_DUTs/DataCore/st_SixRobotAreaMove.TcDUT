@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_SixRobotAreaMove" Id="{42684aec-9452-47c7-b574-bd123151e5cd}">
+    <Declaration><![CDATA[TYPE st_SixRobotAreaMove :
+STRUCT
+	GET :BOOL;
+	A_Area:	E_Location//A爪去放的位置
+	B_Area:	E_Location//B爪去放的位置
+	A_StorageInfor:INT
+	B_StorageInfor:INT
+	
+	HandShake :st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_ActiveResult" Id="{5f5add60-107e-43e7-ae3d-fd3cbe60edeb}">
+    <Declaration><![CDATA[TYPE ST_ActiveResult :
+STRUCT
+	//錯誤
+	AutoMode_ErrorHandle 		: ST_Alarm;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

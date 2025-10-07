@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="FB_ShippingHoming" Id="{fb6a1860-c382-494a-99f6-2de10876296e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ShippingHoming EXTENDS FB_ActionBasic
+VAR_INPUT
+	xExecute : BOOL;
+	xAbort : BOOL;
+    FanucRobot : REFERENCE TO FB_FanucRobot_Basic;
+	Homed : REFERENCE TO BOOL;
+END_VAR
+VAR_OUTPUT
+	xAborted : BOOL;
+	iErrorID : INT;
+	ErrorMsg : STRING;
+	RobotResetCMD : BOOL;
+END_VAR
+VAR
+	StateBehaviour 		 : CBML.ETrigA;
+	uiShippingHomingStep : UINT;
+	FanucRobotCheckTon 	 : TON;
+	ResetRobotDelay 	 :TON;
+	fbExecuteEdgeDetect  :FB_EdgeDetect;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[THIS^.IBehaviourModel := StateBehaviour;
+StateBehaviour(xExecute := xExecute,
+    xDone => xDone,
+    xBusy => xBusy,
+    xError => xError,
+    xAbort := xAbort OR fbExecuteEdgeDetect.xFallingEdge,
+    xAborted => xAborted);
+
+//Error Msg
+iErrorID := StateBehaviour._model.iErrorID;
+ErrorMsg := M_GetErrorMsg(xErrorID := iErrorID);
+FanucRobotCheckTon(PT := T#60S);
+
+//Make sure that C# turns off execute to shut down the service
+fbExecuteEdgeDetect(xInput :=xExecute);
+
+ResetRobotDelay(PT:=T#300MS);]]></ST>
+    </Implementation>
+    <Method Name="CleanupAction" Id="{f4a4a7bd-b035-4c68-8efe-6ad0c9c5f25b}">
+      <Declaration><![CDATA[METHOD CleanupAction
+VAR_INPUT
+    xAbortProposed : BOOL;
+    iErrorIDProposed: INT;
+END_VAR
+VAR_OUTPUT
+    xComplete : BOOL := TRUE;
+    xAbort: BOOL := xAbortProposed;
+ 	iErrorID : INT := iErrorIDProposed;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[RobotResetCMD := FALSE;
+FanucRobotCheckTon.IN := FALSE;
+uiShippingHomingStep := 0;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="CyclicAction" Id="{ccbe0fb7-3c8a-435f-b091-6473cfa1a63d}">
+      <Declaration><![CDATA[METHOD CyclicAction
+VAR_INPUT
+    itfTimingController : CBML.ITimingController;
+END_VAR
+VAR_OUTPUT
+    xComplete : BOOL := TRUE;
+    iErrorID : INT := 0;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[xComplete := FALSE;
+CASE uiShippingHomingStep OF
+	0:
+		FanucRobotCheckTon.IN := TRUE;
+		IF FanucRobot.Error THEN
+			RobotResetCMD := TRUE;
+			ResetRobotDelay.IN:=TRUE;
+		ELSE
+			uiShippingHomingStep := 500;
+		END_IF
+		IF ResetRobotDelay.Q THEN
+			ResetRobotDelay.IN :=FALSE;
+			uiShippingHomingStep := 500;
+		END_IF
+		
+		
+	500:
+		RobotResetCMD := FALSE;
+		FanucRobot.OpMode := E_FanucRobotOpMode.RSR02;
+		IF FanucRobot.Error THEN
+			RobotResetCMD := TRUE;		
+		END_IF
+		IF FanucRobot._RSR2_Completed THEN
+			uiShippingHomingStep := 600;
+		END_IF
+	600:
+		FanucRobot.OpMode := E_FanucRobotOpMode.RSR01;
+		IF FanucRobot._RSR1_Ready THEN
+			uiShippingHomingStep := 700;
+		END_IF
+	700:
+		FanucRobotCheckTon.IN := FALSE;
+		Homed := TRUE;
+		xComplete := TRUE;
+END_CASE
+
+IF FanucRobotCheckTon.Q THEN
+	iErrorID := 4;
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="ExitAction" Id="{b40aaad3-b319-49ad-ab2a-b5db16cceaaa}">
+      <Declaration><![CDATA[METHOD ExitAction
+VAR_INPUT
+    xAfterCleanup : BOOL;
+    xInCopyCode : BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_GetErrorMsg" Id="{03eac412-96d4-4e84-bf40-8d06670d8278}">
+      <Declaration><![CDATA[METHOD M_GetErrorMsg : T_MaxString
+VAR_INPUT
+	xErrorID: INT;
+END_VAR
+
+VAR
+	
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE xErrorID OF
+    0:
+        M_GetErrorMsg := 'No Error';
+    1:
+        M_GetErrorMsg := 'Action time out';
+    2:
+        M_GetErrorMsg := 'Cylinder not ready';
+    3:
+        M_GetErrorMsg := 'Motor not ready';
+    4:
+		M_GetErrorMsg := 'FanucRobot can not homing';
+END_CASE]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="ResetAction" Id="{a5d6e6fc-9b41-4dd3-92ef-8e0382f51f5a}">
+      <Declaration><![CDATA[METHOD ResetAction
+VAR_OUTPUT
+    xComplete : BOOL := TRUE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[FanucRobotCheckTon.IN := false;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="StartAction" Id="{a77f2f89-4696-4442-828d-0460ba5f894c}">
+      <Declaration><![CDATA[METHOD StartAction
+VAR_OUTPUT
+    xComplete : BOOL := TRUE;
+	iErrorID : INT := 0;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Homed := FALSE;
+FanucRobotCheckTon.IN := FALSE;
+uiShippingHomingStep := 0;
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_ShippingHoming">
+      <LineId Id="24" Count="6" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="31" Count="2" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="54" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.CleanupAction">
+      <LineId Id="23" Count="0" />
+      <LineId Id="11" Count="1" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.CyclicAction">
+      <LineId Id="10" Count="1" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="39" Count="2" />
+      <LineId Id="81" Count="2" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="1" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="88" Count="1" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="48" Count="16" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.ExitAction">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.M_GetErrorMsg">
+      <LineId Id="32" Count="9" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.ResetAction">
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ShippingHoming.StartAction">
+      <LineId Id="7" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="6" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

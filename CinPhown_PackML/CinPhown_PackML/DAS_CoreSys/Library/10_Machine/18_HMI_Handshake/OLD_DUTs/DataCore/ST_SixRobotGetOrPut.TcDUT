@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SixRobotGetOrPut" Id="{064b8d2d-deb2-4496-80ae-9549329dbd29}">
+    <Declaration><![CDATA[TYPE ST_SixRobotGetOrPut :
+STRUCT
+	A_Clip_StorageInfor					:INT;
+	A_Clip_BoxOrder						:INT;
+	B_Clip_StorageInfor					:INT;
+	B_Clip_BoxOrder						:INT;
+	A_ActiveDone						:BOOL;
+	B_ActiveDone						:BOOL;
+	A_DataDone							:BOOL;
+	B_DataDone							:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleWarehouseData" Id="{c1c278cd-e7bb-437a-9b38-bcac970a9fd4}">
+    <Declaration><![CDATA[TYPE ST_NeedleWarehouseData :
+STRUCT
+	ST_WarehouseData 	:ARRAY[0..40] OF st_WarehouseData;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

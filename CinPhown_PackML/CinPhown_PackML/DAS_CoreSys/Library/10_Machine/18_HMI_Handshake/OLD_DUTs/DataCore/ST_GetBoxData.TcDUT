@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_GetBoxData" Id="{0e412563-84b2-4d27-8bb4-fac8f2898b99}">
+    <Declaration><![CDATA[TYPE ST_GetBoxData :
+STRUCT
+	//領盒資料
+NeedleInfo					: ARRAY[0..200] OF ST_GetBoxInfo; 
+//資料交握確認
+	HandShake				: st_HandshakeBase;
+END_STRUCT
+ END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

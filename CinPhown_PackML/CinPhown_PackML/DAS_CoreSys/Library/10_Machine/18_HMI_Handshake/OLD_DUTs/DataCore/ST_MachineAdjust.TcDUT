@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_MachineAdjust" Id="{044ab682-90ae-46ef-952d-6eabd77ef7c4}">
+    <Declaration><![CDATA[TYPE ST_MachineAdjust :
+STRUCT
+	//回HOME 
+	MachineHome          		: st_RegionHome;
+	//手臂各區域點對點運動
+	SixRobotPTP					: st_SixRobotPTP;
+	//手臂各區域單動
+	SixRobotAreaMove			: st_SixRobotAreaMove;
+	//配針單動
+	NeedleAction				: st_NeedleAction;
+	//配針批量動作
+	NeedleActionBatch			: st_NeedleActionBatch;
+	//拔針批量動作
+	NeedleRemoveActionBatch		: st_NeedleActionBatch;
+	//料架站位移動
+	BoxHookStationMove			: st_BoxHookStationMove;
+	//層架站位移動
+	LayerStationMove			: st_LayerStationMove;
+	//勾盤站位移動
+	PlateHookStationMove		: st_PlateHookStationMove;
+	//出料手臂單動
+	OutRobotMove				: st_OutRobotMove;
+	//出料手臂連動
+	OutRobotPTP					: st_OutRobotPTP;
+	//圓帶站位移動
+	AllocateStationMove			:st_AllocateStationMove;
+	//圓盤站位移動
+	TurnTableStationMove		:st_TurnTableStationMove;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

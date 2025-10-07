@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Manual_Axis" Id="{a068fcc0-b0f2-4562-8bed-a841c5ebdb77}">
+    <Declaration><![CDATA[TYPE ST_Manual_Axis :
+STRUCT
+	JOGMoveFWD 		: BOOL; // Axis Jog control, move forward
+	JOGMoveBWD 		: BOOL; // Axis Jog control, move backward
+	PTPEnable 		: BOOL; // True : Position Absolute mode active
+    PTPPosition     : LREAL; // The position command during PTP (Point-to-Point) positioning.
+    PTPVelocity     : LREAL; // The velocity command during PTP (Point-to-Point) positioning.
+    PTPAcceleration : LREAL; // The acceleration command during PTP (Point-to-Point) positioning.
+    PTPDeceleration : LREAL; // The deceleration command during PTP (Point-to-Point) positioning.
+    PTPJerk         : LREAL; // The jerk command during PTP (Point-to-Point) positioning.
+	Homing 			: ST_AXIS_HOMING;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

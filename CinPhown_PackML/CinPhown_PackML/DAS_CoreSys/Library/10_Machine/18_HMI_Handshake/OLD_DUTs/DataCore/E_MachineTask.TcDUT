@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_MachineTask" Id="{1eb551e9-5c69-46ec-945e-f8321952ab91}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_MachineTask :
+(
+	//當前機台任務狀態
+	default						:= 0,//尚未有任務
+	Feeding						:= 1,//入料
+	Discharge					:= 2,//出料
+	Needle						:= 3,//配針啟動
+	NeedleRemove				:= 4,//拔針啟動
+	NeedleAllocate				:= 5,//配針領料
+	NeedleRemoveAllocate		:= 6,//拔針領料
+	WarehouseBack 				:= 7,//配針回倉
+	WarehouseBackRemove 		:= 8,//拔針回倉
+	SheepingPicture				:= 9,//出料拍照
+	NeedleRemovePicture			:= 10,//拔針拍照
+	NeedleChangeBox				:= 11,//配針換盒
+	NeedleRemoveChangeBox		:= 12,//拔針換盒
+	NeedleChangeAllocate		:= 13,//配針換圓帶
+	NeedleRemoveChangeAllocate	:= 14,//拔針換圓帶 
+	SixRobotWarehouseAction 	:= 15,//手臂倉儲動作
+	SixRobotBuffersAction		:= 16,//手臂緩衝區動作
+	TaskDone					:= 17,//任務完成
+	Alarm 						:= 18,//錯誤發生
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

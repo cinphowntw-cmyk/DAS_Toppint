@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_PlateHookStationMove" Id="{7d587053-79c3-46cb-a236-d1a2b8009fac}">
+    <Declaration><![CDATA[TYPE st_PlateHookStationMove :
+STRUCT
+	PlateHookPoint		: E_PlateHookPoint;
+	Handshake			: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

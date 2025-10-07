@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_StationOrder" Id="{fed9f4a8-972c-4693-9901-b5b5943fc123}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_StationOrder :
+(
+	enum_member := 0,
+	station_1	:= 1,
+	station_2	:= 2,
+	station_3	:= 3,
+	station_4	:= 4,
+	station_5	:= 5,
+	station_6	:= 6,
+	station_7	:= 7,
+	station_8	:= 8,
+	station_9	:= 9,
+	station_10	:= 10,
+	station_11	:= 11,
+	station_12	:= 12,
+	station_13	:= 13,
+	station_14	:= 14,
+	station_15	:= 15,
+	station_16	:= 16,
+	station_17	:= 17,
+	station_18	:= 18,
+	station_19	:= 19,
+	station_20	:= 20,
+	station_21	:= 21,
+	station_22	:= 22,
+	station_23	:= 23,
+	station_24	:= 24,
+	station_25	:= 25,
+	station_26	:= 26,
+	station_27	:= 27,
+	station_28	:= 28,
+	station_29	:= 29,
+	station_30	:= 30,
+	station_31	:= 31,
+	station_32	:= 32,
+	station_33	:= 33,
+	station_34	:= 34,
+	station_35	:= 35,
+	station_36	:= 36,
+	station_37  := 37;
+	station_38	:= 38,
+	station_39	:= 39,
+	station_40	:= 40,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

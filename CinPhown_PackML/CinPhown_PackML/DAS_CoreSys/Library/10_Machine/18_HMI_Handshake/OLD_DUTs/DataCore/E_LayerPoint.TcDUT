@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_LayerPoint" Id="{cb58fb7b-f753-40fc-ae51-2ae7f583e371}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_LayerPoint :
+(
+	Origin 		:= 0,
+	Station_1	:= 1,
+	Station_2	:= 2,
+	Station_3	:= 3,
+	Station_4	:= 4,
+	Station_5	:= 5,
+	Station_6	:= 6,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

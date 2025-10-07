@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_FeedingDataInfo" Id="{4541c9c4-fb3f-4ded-afd1-5b89692a5c69}">
+    <Declaration><![CDATA[TYPE ST_FeedingDataInfo :
+STRUCT
+	BoxCameraDone 					: BOOL;//拍照結束
+	CameraDiameterRequest 			: BOOL;//外徑需求
+	CameraDiameterDone 				: BOOL;//外徑拍照結束
+	FirstBoxLocation 				: E_Location;//第一盒位置
+	SecondBoxLocation 				: E_Location;//第二盒位置
+	FirstBoxStorageInfor			:INT;//第一盒到倉儲的位置
+	SecondBoxStorageInfor			:INT;//第二盒到倉儲的位置
+	stopFeeding						:BOOL;//中斷入料
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_NeedleWarehouse" Id="{5e0c02f0-c839-4ab6-97a2-10ea790daf70}">
+    <Declaration><![CDATA[TYPE ST_NeedleWarehouse :
+STRUCT
+	//提供回倉資料
+	 NeedleWarehouseInfo 					:ST_NeedleWarehouseData;
+	//資料交握確認
+	HandShake								: st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

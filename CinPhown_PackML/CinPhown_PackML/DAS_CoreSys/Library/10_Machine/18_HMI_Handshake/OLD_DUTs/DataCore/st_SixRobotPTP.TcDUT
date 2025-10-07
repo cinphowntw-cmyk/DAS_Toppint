@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_SixRobotPTP" Id="{0afc7cbc-4c55-40fc-8267-4875fa8fb77a}">
+    <Declaration><![CDATA[TYPE st_SixRobotPTP :
+STRUCT
+	A_AreaGet:	E_Location//A爪去取的位置
+	B_AreaGet:	E_Location//B爪去取的位置
+	A_StorageInfor:INT
+	B_StorageInfor:INT
+	
+	A_AreaPut:	E_Location//A爪去放的位置
+	B_AreaPut:	E_Location//B爪去放的位置
+	A_StorageInfor:INT
+	B_StorageInfor:INT
+	
+	HandShake :st_HandshakeBase;
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

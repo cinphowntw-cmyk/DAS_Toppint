@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Needle" Id="{59243b5a-6aeb-45ed-bdbe-03164456d55a}">
+    <Declaration><![CDATA[TYPE ST_Needle :
+STRUCT
+	//配針動作資料
+		NeedleInfo							: ARRAY[0..2000] OF ST_AllocationJobBatchModeInfo; 
+	//初始圓帶資料
+		AllocationInfoData			 		:ARRAY[0..40] OF st_AllocationData;
+	//空盒資料
+		EmptyBoxCount						:INT;
+	//滿盒資料
+		FullboxCount						:INT;
+	//鐵盤數資料
+		PlateCount							:INT;
+	//拍照位	1~6的鐵盤位加上鐵盤碼的位置
+	PicturesLocation						: ARRAY[0..6] OF ST_PlateOrder;
+	//出貨動作資料
+		OutBoxMoveData 						: ST_ClampingToPlate;
+	//資料交握確認
+		HandShake							: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

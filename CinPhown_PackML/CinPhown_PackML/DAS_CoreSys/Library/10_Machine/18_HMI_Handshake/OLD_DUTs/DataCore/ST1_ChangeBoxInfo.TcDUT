@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST1_ChangeBoxInfo" Id="{5827aee1-069a-4ae1-81cb-1b14c525e54f}">
+    <Declaration><![CDATA[TYPE ST1_ChangeBoxInfo :
+STRUCT
+	CheckedChangeBox		:	BOOL;
+	ChangeBox 				:	ST0_ChangeBoxesInfo;
+	HandShake				:  	st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

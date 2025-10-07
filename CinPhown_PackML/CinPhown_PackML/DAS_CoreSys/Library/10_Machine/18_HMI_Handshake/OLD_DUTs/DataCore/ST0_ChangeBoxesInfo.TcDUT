@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST0_ChangeBoxesInfo" Id="{0fc71997-3edb-43b8-9f53-a929560e2d5a}">
+    <Declaration><![CDATA[TYPE ST0_ChangeBoxesInfo :
+STRUCT
+	ChangeBoxesData 	:ARRAY[0..40] OF st_ChangeBoxesData;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

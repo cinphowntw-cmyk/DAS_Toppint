@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_NeedleClip" Id="{247ac1a5-661b-4af4-af5a-a66f45f2dd9b}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_NeedleClip :
+(
+	clip_A		:= 0,
+	clip_B		:= 1,
+	clip_C		:= 2,
+	clip_D		:= 3,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

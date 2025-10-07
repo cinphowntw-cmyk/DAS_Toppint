@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_WarehouseBackInfo" Id="{e365d432-c23c-43df-9f2d-d09066f41950}">
+    <Declaration><![CDATA[TYPE ST_WarehouseBackInfo :
+STRUCT
+	//回傳那個圓帶回到哪個倉儲位置
+	AllocationInfo : :ARRAY[0..40] OF st_AllocationData;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

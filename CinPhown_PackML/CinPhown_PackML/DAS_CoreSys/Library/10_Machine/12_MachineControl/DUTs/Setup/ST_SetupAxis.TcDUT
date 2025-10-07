@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SetupAxis" Id="{aaadc2da-6143-4c6b-ba64-3f87b05f6d34}">
+    <Declaration><![CDATA[TYPE
+    ST_SetupAxis :
+    STRUCT
+        TurnTable  		: ST_AxisPara; 				// 圓盤參數
+        Allocate   		: ST_AxisPara; 				// 圓帶參數
+        OutRobot_X 		: ST_AxisPara;				// 出料手臂X參數
+        OutRobot_Y 		: ST_AxisPara; 				// 出料手臂Y參數
+        Needle_X 		: ST_AxisPara; 				// 配針 X參數
+        Needle_Y 		: ST_AxisPara; 				// 配針 Y參數
+		RackMotor  		: ST_AxisPara; 			    //出貨料架參數
+		ElvaterAxis		: ST_AxisPara;				//電梯參數
+		HookAxis		: ST_AxisPara;				//勾盤參數
+		FinishAxis		: ST_AxisPara;				//出料層架參數
+    END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

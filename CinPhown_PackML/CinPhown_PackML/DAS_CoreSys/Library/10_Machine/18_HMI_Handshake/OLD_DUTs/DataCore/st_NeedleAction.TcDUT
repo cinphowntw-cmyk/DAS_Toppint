@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="st_NeedleAction" Id="{f85ff63c-0ca5-44a3-8d72-1fca6a074b8c}">
+    <Declaration><![CDATA[TYPE st_NeedleAction :
+STRUCT
+	Clip				: E_NeedleClip;
+	NeedlePoint			: E_NeedlePoint;
+	Handshake			: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

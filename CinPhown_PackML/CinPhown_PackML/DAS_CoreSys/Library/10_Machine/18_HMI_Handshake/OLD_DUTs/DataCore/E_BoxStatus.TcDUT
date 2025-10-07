@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_BoxStatus" Id="{6c5f750a-a9c7-4545-89d9-a908565d1ba2}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_BoxStatus :
+(
+	EmptyBox 			:= 0,
+	FullBox  			:= 1,
+	NeedleBox			:= 2,
+	NeedleRemoveBox		:= 3,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_AllocationData" Id="{1f100c02-e1bd-404d-8d41-8bb1a3be7021}">
+    <Declaration><![CDATA[TYPE ST_AllocationData
+STRUCT
+	//圓帶位置 0代表沒有盒子
+	AllocationNo			: E_StationOrder;//1~40 
+	//倉儲位置
+	StorageInfor			: INT; //1~400
+	//倉儲盒子順序
+	BoxOrder				: INT;//1~10
+	//換盒次數
+	ChangeBoxCount          : INT;
+	//針數量
+	
+	//
+	//SIZE  				:DOUBLE
+	//
+	//CYCLE					:INT
+	
+	Num						: INT;//1~50
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

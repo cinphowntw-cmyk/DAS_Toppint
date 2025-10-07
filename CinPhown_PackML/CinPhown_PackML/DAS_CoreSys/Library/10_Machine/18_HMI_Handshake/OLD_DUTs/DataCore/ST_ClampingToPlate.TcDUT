@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_ClampingToPlate" Id="{044fd3a9-a25b-4040-8189-a94b5c682ed7}">
+    <Declaration><![CDATA[TYPE st_ClampingToPlate:
+STRUCT
+	//盒數
+	NrOfBoxes				: INT;	// 1,2
+	//放到哪裡
+	TargetOfClipA			: INT;	// 0 : R1, 1: R2 or To plate index
+	TargetOfClipB			: INT;	// 0 : R1, 1: R2 or To plate index
+	//使用夾爪
+	UseClibA				: BOOL;	//Clip A only work if True
+	UseClibB				: BOOL;	//Clip B only work if True
+	//從哪裡拿
+	ClipAFrom				: INT; //0: 配好輸送帶。1: 同尺吋輸送帶
+	ClipBFrom				: INT; //0: 配好輸送帶。1: 同尺吋輸帶
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

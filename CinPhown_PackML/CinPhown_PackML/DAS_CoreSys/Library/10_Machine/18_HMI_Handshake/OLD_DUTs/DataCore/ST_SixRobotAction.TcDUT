@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_SixRobotAction" Id="{04f91708-a861-46a8-b00c-92dcd257171d}">
+    <Declaration><![CDATA[TYPE ST_SixRobotAction :
+STRUCT
+	Info		:ST_SixRobotActionInfo;
+	Feeback		:ST_SixRobotActionFeeback;
+	Handshake	: ST_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_BufferArea" Id="{f3548c33-b3c7-4279-8fc2-00128e4e0105}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_BufferArea :
+(
+	enum_member 	:= 0,
+	buffers_1		:= 1,
+	buffers_2		:= 2,
+	buffers_3		:= 3,
+	buffers_4		:= 4,
+	buffers_5		:= 5,
+	buffers_6		:= 6,
+	buffers_7		:= 7,
+	buffers_8		:= 8,
+	buffers_9		:= 9,
+	buffers_10		:= 10,
+	buffers_11		:= 11,
+	buffers_12		:= 12,
+	buffers_13		:= 13,
+	buffers_14		:= 14,
+	buffers_15		:= 15,
+	buffers_16		:= 16,
+	buffers_17		:= 17,
+	buffers_18		:= 18,
+	buffers_19		:= 19,
+	buffers_20		:= 20,
+	buffers_21		:= 21,
+	buffers_22		:= 22,
+	buffers_23		:= 23,
+	buffers_24		:= 24,
+	buffers_25		:= 25,
+	buffers_26		:= 26,
+	buffers_27		:= 27,
+	buffers_28		:= 28,
+	buffers_29		:= 29,
+	buffers_30		:= 30,
+	buffers_31		:= 31,
+	buffers_32		:= 32,
+	buffers_33		:= 33,
+	buffers_34		:= 34,
+	buffers_35		:= 35,
+	buffers_36		:= 36,
+	buffers_37		:= 37,
+	buffers_38		:= 38,
+	buffers_39		:= 39,
+	buffers_40		:= 40,
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Mode" Id="{eba3fbce-d28b-4b36-8bab-017186b59c39}">
+    <Declaration><![CDATA[TYPE ST_Mode :
+STRUCT
+	TargetMode	:E_MachineMode := E_MachineMode.UNDEFINE; 	
+	CurrentMode :E_MachineMode:=E_MachineMode.ModeSelect;
+	HandshakeBase : st_HandshakeBase;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
